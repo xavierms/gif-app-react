@@ -1,10 +1,18 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import  { createRoot } from 'react-dom/client'
 import { GifApp } from './GifApp'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+import './styles.css'
+
+
+
+const root = document.getElementById('root') as HTMLElement;
+createRoot(root).render(
   <React.StrictMode>
     <GifApp />
-  </React.StrictMode>,
-)
+  </React.StrictMode>)
+// ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+//   <React.StrictMode>
+//     <GifApp />
+//   </React.StrictMode>,
+// )
