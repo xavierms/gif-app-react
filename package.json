@@ -1,15 +1,18 @@
 {
   "name": "gifapp",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "http://xavierms.github.io/gif-app-react",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "deploy":"gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
