@@ -3,7 +3,7 @@ import './modal.css';
 export const Modal = ({ handleClose, show, children }: {
   handleClose: () => void;
   show: boolean;
-  children: React.ReactNode[];
+  children: React.ReactNode;
 }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 

@@ -14,7 +14,7 @@
     border-radius: 10px;
     position:fixed;
     background: white;
-    width: 80%;
+    /* width: 80%; */
     height: auto;
     top:50%;
     left:50%;
@@ -28,8 +28,9 @@
   .display-none {
     display: none;
   }
-  img{
+  .modal-content img{
     width: 100%;
+    border-radius: 10px;
   }
   .btn-close {
     position: fixed;
@@ -38,7 +39,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    background: #0066ff;
+    background: #191d239e;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -79,7 +80,7 @@
   }
   .btn-close:hover, .btn-close:focus {
     transform: rotateZ(90deg);
-    background: #0052cc;
+    background: #050505c0;
   }
   .visually-hidden {
     position: absolute !important;
