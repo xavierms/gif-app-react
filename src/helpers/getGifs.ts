@@ -1,4 +1,3 @@
-import { ImageProps } from "../props/ImageProps";
 
 export const getGifs = async(category: string) =>{
 
@@ -8,6 +7,5 @@ export const getGifs = async(category: string) =>{
     const { data } = await resp.json();
 
      const gifs = [...data]
-    console.log(gifs);
     return gifs;
 }
