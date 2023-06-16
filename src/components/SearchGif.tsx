@@ -1,8 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { AddCategoryProps } from "../interfaces/AddCategoryProps";
+import { SearchGifProps } from "../props/SearchGifProps";
 
   
-export const AddCategory = ({ onNewCategory }:AddCategoryProps) => {
+export const SearchGif = ({ onNewGif } : SearchGifProps) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -11,11 +11,11 @@ export const AddCategory = ({ onNewCategory }:AddCategoryProps) => {
     }
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const category = inputValue.trim();
-        if ( !category.length ) return;
+        const gif = inputValue.trim();
+        if ( !gif.length ) return;
 
         // setCategories((categories: string[]) => [ inputValue, ...categories ])
-        onNewCategory( category );
+        onNewGif( gif );
         setInputValue('');
     }
     return (
@@ -25,7 +25,8 @@ export const AddCategory = ({ onNewCategory }:AddCategoryProps) => {
                 type="text"
                 placeholder="Search gif"
                 value={inputValue}
-                onChange={ onInputChange } />
+                onChange={ onInputChange }
+                style={{width:"35%"}} />
         </form>
     )
 }

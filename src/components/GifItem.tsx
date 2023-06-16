@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload,faExpand } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faExpand } from '@fortawesome/free-solid-svg-icons';
 
 import { ImageProps } from "../props/ImageProps";
 import { downloadGif } from "../helpers/downloadGif";
@@ -22,21 +22,22 @@ export const GifItem = (props: ImageProps) => {
   return (
     <>
       <div className="card">
-
         <img src={url} alt={fileName} />
         <div className="card-footer">
-          <span onClick={openModal}>
-          <FontAwesomeIcon icon={faExpand} />
-          </span>
-          <span onClick={() => downloadGif(url,fileName)}>
-            <FontAwesomeIcon icon={faDownload} />
-          </span>
+          <p>{fileName}</p>
+          <div className="card-footer-icons">
+            <span onClick={openModal}>
+              <FontAwesomeIcon icon={faExpand} />
+            </span>
+            <span onClick={() => downloadGif(url, fileName)}>
+              <FontAwesomeIcon icon={faDownload} />
+            </span>
+          </div>
         </div>
       </div>
-
       <Modal show={modalIsOpen} handleClose={closeModal} >
-           <img src={url} alt={fileName} />
-        </Modal>
+        <img src={url} alt={fileName} />
+      </Modal>
     </>
   )
 }
