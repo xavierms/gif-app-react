@@ -1,37 +1,40 @@
 import { useState } from "react"
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+
+import { SearchGif, GifGrid } from "./components";
+import Footer from "./shared/components/layout/footer/footer";
 
 export const GifApp = () => {
-  const obj = ['DBZ'];
-  const [ categories, setCategories ] = useState(obj);
+  const [gifs, setGif] = useState(['']);
 
-  const onAddCategory = (newCategory: string) => {
+  const onSearchGif = (newGif: string) => {
 
-    const sameCategory = categories.some( 
-        category => category.toLowerCase() === newCategory.toLowerCase()
-         );
-    if(!sameCategory)
-    setCategories([ newCategory, ...categories ]);
+    const sameGif = gifs.some(
+      gifs => gifs.toLowerCase() === newGif.toLowerCase()
+    );
+    if (!sameGif)
+    setGif([newGif, ...gifs]);
   }
   return (
     <>
-      <h1>GifApp</h1>
+    
+      <div className="App">
+        <div className="content-app">
+        <h1>Gif App</h1>
 
-      <AddCategory 
-          onNewCategory={ (value) => onAddCategory(value) }
-          // onNewCategory={ onAddCategory }
-        // setCategories={setCategories} 
+        <SearchGif
+          onNewGif={(value) => onSearchGif(value)}
         />
-      {/* <button type="button" >Agregar</button> */}
-      {
-          categories.map( ( category )=> (
-            <GifGrid  
-                key={ category }
-                category={ category } />
+        {
+          gifs.map((gif) => (
+            <GifGrid
+              key={gif}
+              gif={gif} />
 
           ))
-      }
+        }
+        </div>
+      </div>
+      <Footer />
     </>
   )
 }
