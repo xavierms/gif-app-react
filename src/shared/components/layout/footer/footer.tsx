@@ -1,6 +1,6 @@
 import './footer.css';
-import github from '../../../../assets/github.png';
-import linkedin from '../../../../assets/linkedin.png';
+import github from '../../../../../public/github.png';
+import linkedin from '../../../../../public/linkedin.png';
 const Footer = () => {
     return (
         <footer className="footer">

@@ -137,11 +137,15 @@ h3 {
 @media screen and (max-width: 768px) {
   .search-input {
     font-size: 14px;
+    width: 70%;
+
   }
 }
 
 @media screen and (max-width: 480px) {
   .search-input {
     font-size: 12px;
+    width: 60%;
+
   }
 }
