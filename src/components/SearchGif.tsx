@@ -1,6 +1,9 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { SearchGifProps } from "../props/SearchGifProps";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+import { SearchGifProps } from "../props/SearchGifProps";
   
 export const SearchGif = ({ onNewGif } : SearchGifProps) => {
 
@@ -18,15 +21,24 @@ export const SearchGif = ({ onNewGif } : SearchGifProps) => {
         onNewGif( gif );
         setInputValue('');
     }
+    const onSearchClick = (event: any) => {
+        event.preventDefault();
+        onSubmit(event);
+      };
+      
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={ onSubmit }>
 
             <input
                 type="text"
                 placeholder="Search gif"
-                value={inputValue}
+                value={ inputValue }
                 onChange={ onInputChange }
-                style={{width:"35%"}} />
+                className="search-input" />
+                <FontAwesomeIcon 
+                    icon={ faSearch } 
+                    className="search-icon" 
+                    onClick={ onSearchClick }/>
         </form>
     )
 }

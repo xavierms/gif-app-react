@@ -116,3 +116,32 @@ h3 {
 .card p{
   color: #C69749;
 }
+
+.search-input {
+  width: 35%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.search-icon {
+  cursor: pointer;
+  color:  #C69749;
+  font-size: 23px;
+}
+.search-icon:hover {
+  color:  #a06c19;
+}
+
+@media screen and (max-width: 768px) {
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-input {
+    font-size: 12px;
+  }
+}
