@@ -17,10 +17,10 @@ export interface ImageProps {
   is_sticker:                 number;
   import_datetime:            string;
   trending_datetime:          string;
-  images:                     Images;
-  user:                       User;
+  images?:                     Images;
+  user?:                       User;
   analytics_response_payload: string;
-  analytics:                  Analytics;
+  analytics?:                  Analytics;
 }
 
 export interface Analytics {
