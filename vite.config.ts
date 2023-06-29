@@ -7,10 +7,5 @@ export default defineConfig({
   esbuild: {
     jsxInject: `import React from 'react';`,
   },
-  define: {
-    'process.env': {},
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
-  },
+
 })
