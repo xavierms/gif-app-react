@@ -4,8 +4,6 @@ import { GifApp } from './GifApp'
 
 import './styles.css'
 
-
-
 const root = document.getElementById('root') as HTMLElement;
 createRoot(root).render(
   <React.StrictMode>
