@@ -4,7 +4,7 @@ import { SearchGif, GifGrid } from "./components";
 import Footer from "./shared/components/layout/footer/footer";
 
 export const GifApp = () => {
-  const [gifs, setGif] = useState(['']);
+  const [gifs, setGif] = useState(['gif']);
 
   const onSearchGif = (newGif: string) => {
 
