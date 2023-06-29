@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import PropTypes from "prop-types";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faExpand } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,7 +11,7 @@ import { Modal } from "../shared/components/modal/modal";
 
 export const GifItem = (props: ImageProps) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const url = props.images.downsized.url;
+  const url = props!.images!.downsized.url;
   const fileName = props.title;
 
   const openModal = () => {
@@ -40,4 +42,9 @@ export const GifItem = (props: ImageProps) => {
       </Modal>
     </>
   )
+}
+
+
+GifItem.prototype = {
+  url: PropTypes.string.isRequired
 }
